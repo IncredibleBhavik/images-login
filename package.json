@@ -2,6 +2,7 @@
   "dependencies": {
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
+    "googleapis": "^164.1.0",
     "xlsx": "^0.18.5"
   }
 }
