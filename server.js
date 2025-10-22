@@ -5,7 +5,7 @@ const fs = require('fs');  // Built-in Node.js module for file system
 const path = require('path');  // Built-in Node.js module for file paths
 
 const app = express();  // Create an Express app
-const PORT = 3000;  // Port for the server (you can change this if needed)
+const PORT = process.env.PORT || 3000;  // Port for the server (you can change this if needed)
 
 // Middleware to parse JSON requests
 app.use(bodyParser.json());
@@ -54,5 +54,5 @@ app.post('/submit-email', (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
